@@ -6,7 +6,7 @@ class Game():
         self.board = ataxx.Board(fen)
         self.player1 = "Player 1"
         self.player2 = "Player 2"
-        self.black_turn = self.board.turn == ataxx.Board.BLACK
+        self.black_turn = self.board.turn == ataxx.BLACK
         self.btime = btime
         self.wtime = wtime
         self.binc = binc
@@ -31,7 +31,7 @@ class Game():
 
                 # Apply move
                 self.board.makemove(move)
-                self.black_turn = (self.board.turn == ataxx.Board.BLACK)
+                self.black_turn = (self.board.turn == ataxx.BLACK)
 
                 # Update time stores
                 self.btime_last = self.btime

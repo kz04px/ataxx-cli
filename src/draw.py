@@ -30,13 +30,13 @@ def pieces(screen, game, x, y):
             xcoord = x + 2*i + 2
             ycoord = y + 2*j + 2
 
-            if piece == ataxx.Board.BLACK:
+            if piece == ataxx.BLACK:
                 screen.addstr(ycoord, xcoord, "◉", curses.color_pair(3))
-            elif piece == ataxx.Board.WHITE:
+            elif piece == ataxx.WHITE:
                 screen.addstr(ycoord, xcoord, "◉", curses.color_pair(4))
-            elif piece == ataxx.Board.GAP:
+            elif piece == ataxx.GAP:
                 screen.addstr(ycoord, xcoord, " ")
-            elif piece == ataxx.Board.EMPTY:
+            elif piece == ataxx.EMPTY:
                 screen.addstr(ycoord, xcoord, " ", curses.color_pair(4))
 
 def timers(screen, game, x, y):
@@ -70,9 +70,9 @@ def status(screen, game, x, y):
     black, white, gap, empty = game.board.count()
     screen.addstr(y+7, x+20, F" {black:>3} vs {white:<3} ", curses.color_pair(3))
 
-    if game.board.turn == ataxx.Board.BLACK:
+    if game.board.turn == ataxx.BLACK:
         screen.addstr(y+8, x+20, "Black's turn", curses.color_pair(3))
-    elif game.board.turn == ataxx.Board.WHITE:
+    elif game.board.turn == ataxx.WHITE:
         screen.addstr(y+8, x+20, "White's turn", curses.color_pair(3))
 
 def thinking(screen, game, x, y, n):
